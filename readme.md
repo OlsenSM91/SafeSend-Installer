@@ -1,8 +1,15 @@
 # SafeSend Installer
 
 ## Usage
-Add the license key to the script and run the script as `Admin` on the workstation
+Download the binary for `ssdeploy.exe` and provide the MSI URL and License key
 
-## ssdeploy.ps1
-This script is pretty much ready to go. The MSI is in releases and the top line is where you place your MSI URL
-- The script will download the MSI, Execute the MSI and then add the license file
+# Windows Binary to Run a SafeSend Installer
+## ssdeploy.exe
+
+## Usage
+
+To use this application, all you need to do is open an admin Powershell and run the following:
+```
+ssdeploy.exe --Installer-URL 'https://github.com/OlsenSM91/SafeSend-Installer/releases/download/initial/SafeSendSetup.msi' --SSLic 'LICENSE_KEY_HERE'
+```
+The script will fail if both arguments aren't supplied. The script will download, execute and verify the MSI installation and then it will add the SafeSend license key to the registry
